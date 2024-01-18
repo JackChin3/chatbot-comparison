@@ -21,8 +21,6 @@ def clear_history():
 #     history.append(prompt)
 #     convhist = map(str,history)
 #     result = '\n'.join(convhist)
-    
-#     #how do you pass a function variable in?
 #     return f"", result, do_openai(prompt), do_lmstudio(prompt), f"blue"
 
 def do_history(prompt):
@@ -81,7 +79,9 @@ with gr.Blocks() as demo1:
         elif dropdown in ("gpt-3.5-turbo", "gpt-4"):
             start_time = time.time()
 
-            client = OpenAI(api_key="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")
+            # Add own API key here, or set OPENAI_API_KEY environment variable
+            #client = OpenAI(api_key="******")
+
 
             completion = client.chat.completions.create(
                 model=dropdown,
