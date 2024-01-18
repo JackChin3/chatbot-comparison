@@ -81,6 +81,7 @@ with gr.Blocks() as demo1:
 
             # Add own API key here, or set OPENAI_API_KEY environment variable
             #client = OpenAI(api_key="******")
+            client = OpenAI()
 
 
             completion = client.chat.completions.create(
